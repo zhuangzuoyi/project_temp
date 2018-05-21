@@ -1,0 +1,25 @@
+UART Protocol:
+PC:
+    START  lenght(H) lenght(L)  OP code   parameter   check sum
+     0xAA   1 byte    1 byte    1 byte      N bytes     1 byte
+device:
+    START  lenght(H) lenght(L)  OP code   parameter   check sum
+     0xAA   1 byte    1 byte    1 byte      N bytes     1 byte
+          
+     
+OP code：
+1、0x00  bootloader system
+    0x00  get bootloader version
+    0x01  get mcu model
+    0x02  get app start address
+    
+2、 0x01  app system
+    0x00 get app firmware version
+    0x01 get mcu model
+    0x02 get device id
+    
+3、 0x02  Flash mcd
+    0x00 erea sector
+    0x01 write flash
+    
+    
