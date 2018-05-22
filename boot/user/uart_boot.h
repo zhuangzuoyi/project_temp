@@ -4,6 +4,17 @@
 
 #include "stm32f1xx_hal.h"
 
+#define BOOT_VERSION                      0L              /**< major version number */
+#define BOOT_SUBVERSION                   0L              /**< minor version number */
+#define BOOT_REVISION                     1L              /**< revise version number */
+
+#define MCU_MODEL                         "STM32F103rb"
+
+enum{
+  BOOT_CMD_BOOT_MSG=0x00,
+  BOOT_CMD_APP_MSG,
+  BOOT_CMD_FLASH
+};
 
 enum{
   BOOT_CMD_GET_BOOT_VER=0,
